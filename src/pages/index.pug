@@ -1,0 +1,8 @@
+extends ../components/layout-default/layout-default
+include ../components/steps/steps
+
+block head
+    - var pageTitle = 'Index Page';
+
+block content
+    +steps()
