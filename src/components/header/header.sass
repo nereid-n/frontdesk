@@ -1,2 +1,155 @@
 .header
-	display: block
+  position: relative
+  background-color: #282828
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 0
+  &__menu
+    padding: 0
+    margin: 0
+    margin-right: calc(100% * 0.5 * 0.60)
+    padding-right: 5px
+    list-style-type: none
+    display: flex
+    align-items: center
+    @media (max-width: 1200px)
+      margin-right: 0
+    @media (max-width: 992px)
+      display: none
+    li
+      a
+        padding: 0 10px
+        color: #ffffff
+        text-decoration: none
+        text-transform: uppercase
+        font-family: 'Muller-Extra-Bold'
+        &:hover
+          color: #f7d100
+  &__main
+    display: flex
+    flex-wrap: wrap
+    margin-top: 60px
+  &__left
+    width: 50%
+    padding-right: 70px
+    color: #ffffff
+    box-sizing: border-box
+    @media (max-width: 1200px)
+      width: 100%
+      padding-right: 0
+    &-title-wrap
+      display: flex
+      justify-content: flex-end
+    &-desc
+      p
+        margin-bottom: 20px
+    &-bottom
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: fit-content
+      margin-top: 30px
+      @media (max-width: 1200px)
+        width: auto
+    .main-title
+      margin-top: 0
+      margin-bottom: 15px
+      max-width: 374px
+      @media (max-width: 1200px)
+        max-width: none
+    &-video-link
+      display: flex
+      align-items: center
+      font-size: 14px
+      @media (max-width: 576px)
+        display: inline
+      &_btn
+        text-decoration: underline
+        margin: 0 5px
+        cursor: pointer
+  &__right
+    width: 50%
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: 1200px)
+      width: 100%
+    &-hour
+      width: 40%
+      background-color: #f7d100
+      padding: 35px 15px 20px
+      box-sizing: border-box
+      @media (max-width: 576px)
+        width: 100%
+      .link-more
+        margin-top: 45px
+        display: block
+        text-align: right
+    &-week
+      width: 60%
+      margin-top: -122px
+      background-image: url(../images/header-photo.png)
+      @media (max-width: 1200px)
+        margin-top: 0
+      @media (max-width: 576px)
+        width: 100%
+    &-about
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      background-color: #ffffff
+      padding: 15px
+      &--main
+        width: 35%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        padding-left: 10px
+        box-sizing: border-box
+        @media (max-width: 576px)
+          width: 100%
+          margin-bottom: 20px
+.client-card
+  width: 65%
+  display: flex
+  align-items: center
+  @media (max-width: 576px)
+    width: 100%
+  &__desc
+    margin-top: 10px
+    margin-left: 10px
+    &--title
+      text-transform: uppercase
+      font-family: 'Muller-Extra-Bold'
+      font-size: 14px
+    &--city
+      font-family: 'Muller-Medium'
+      text-transform: none
+    &--main
+      p
+        margin-bottom: 0
+
+.header__line
+  position: absolute
+  background-color: #454545
+  width: 1px
+  top: 0
+  bottom: 0
+  @media (max-width: 1300px)
+    display: none
+
+.header__line1
+  top: 50%
+  left: 20px
+
+.header__line2
+  left: calc((100% - 1170px) / 4 + 10px)
+
+.header__line3
+  left: calc((100% - 1170px) / 2)
+  bottom: 50%
+
+.header__line4
+  right: calc((100% - 1170px) / 4 + 20px)

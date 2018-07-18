@@ -1,3 +1,60 @@
 mixin header()
 	+b('header').header
-		block
+		.header__line.header__line1
+		.header__line.header__line2
+		.header__line.header__line3
+		.header__line.header__line4
+		.container
+			+e.top
+				a(href="/")
+					img(src="assets/images/logo.png" width="177" height="38")
+				+e('ul').menu
+					li
+						a(href="#steps") How does it work?
+					li
+						a(href="#calculate") Calculate
+					li
+						a(href="#more") More our product
+					li
+						a(href="#contact") Contact
+			+e.main
+				+e.left
+					+e.left-title-wrap
+						h1.main-title Boost Your Revenue Immediately
+					+e.left-desc
+						p.
+							We provide a solution based on remote employees, to reduce your company expenses up to 65%. What you finally 							get? A competitive pricing - most of the remote positions are paid just $7.00 USD/hour per operator. We work 							full-time or part-time shifts, in any time zone business hours or even cover your operations 24x7x365.
+						p.
+							Hire a professional starting from $280/week with no extra <br>
+							expenses - only profit.
+					+e.left-bottom
+						button.button-main try now
+						+e('p').left-video-link we recommend that you
+							span.header__left-video-link_btn.video-btn-js  watch the video
+							img(src="assets/images/icons/youtube.png" width="20" height="20")
+				+e.right
+					+e.right-hour
+						+b('h2').main-title Just $7/hour <br>
+							+e('span').small  per operator
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 							dolore magna aliqua.
+						a(href="#").link-more see more
+					+e.right-week.week
+						h2.week__title professional <br>
+							span.week__title_small starting
+						span.week__salary $280/week
+							span.week__line
+						a(href="#").link-more see more
+					+e.right-about
+						+e.right-about--main
+							+b('h2').main-title about us <br>
+								+e('span').small  our clients
+							a(href="#").link-more see more
+						+b.client-card
+							img(src="assets/images/man.png" width="134" height="145")
+							+e.desc
+								+e('span').desc--title Jon dorot,
+									+e('span').desc--city  New York
+								+e.desc--main
+									p.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 										et dolore magna aliqua.

@@ -1,0 +1,90 @@
+*
+  font-family: 'Muller'
+
+body
+  margin: 0
+  color: #282828
+
+p
+  text-align: justify
+
+.container
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  box-sizing: border-box
+  @media (min-width: 576px)
+    max-width: 540px
+  @media (min-width: 768px)
+    max-width: 720px
+  @media (min-width: 992px)
+    max-width: 960px
+  @media (min-width: 1200px)
+    max-width: 1140px
+
+  .main-title
+    text-transform: uppercase
+    font-family: 'Muller-Extra-Bold'
+    &__small
+      font-family: 'Muller'
+      font-weight: 400
+
+  .button-main
+    background-color: #f7d100
+    padding: 12px 110px 10px
+    color: #282828
+    text-transform: uppercase
+    font-family: 'Muller-Extra-Bold'
+    font-size: 18px
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    @media (max-width: 576px)
+      padding: 12px 20px 10px
+      width: 100%
+
+.link-more
+  color: inherit
+  text-decoration: underline
+  background-image: url(../images/icons/arrow.png)
+  background-repeat: no-repeat
+  background-position: center right
+  padding-right: 20px
+
+.week
+  color: #ffffff
+  text-align: right
+  padding: 30px 0
+  padding-right: 40px
+  box-sizing: border-box
+  overflow: hidden
+  .link-more
+    background-image: url(../images/icons/arrow-white.png)
+    margin-top: 10px
+    display: block
+    margin-right: -15px
+    padding-right: 25px
+  &__title
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 30px
+    margin-bottom: 10px
+    &_small
+      text-transform: lowercase
+      padding-right: 5px
+  &__salary
+    position: relative
+    display: block
+    color: #f7d100
+    font-family: 'Muller-Extra-Bold'
+    font-size: 34px
+    margin-right: 50px
+  &__line
+    position: absolute
+    bottom: 0
+    top: -500px
+    right: 200px
+    width: 1px
+    background-color: #f9d50f
