@@ -3,10 +3,19 @@
 
 body
   margin: 0
+
+.root
   color: #282828
+  background-color: #ebebeb
+  height: 100%
+  overflow: hidden
 
 p
   text-align: justify
+  line-height: 1.4em
+
+h1
+  font-size: 2em
 
 .container
   width: 100%
@@ -24,26 +33,26 @@ p
   @media (min-width: 1200px)
     max-width: 1140px
 
-  .main-title
-    text-transform: uppercase
-    font-family: 'Muller-Extra-Bold'
-    &__small
-      font-family: 'Muller'
-      font-weight: 400
+.main-title
+  text-transform: uppercase
+  font-family: 'Muller-Extra-Bold'
+  &__small
+    font-family: 'Muller'
+    font-weight: 400
 
-  .button-main
-    background-color: #f7d100
-    padding: 12px 110px 10px
-    color: #282828
-    text-transform: uppercase
-    font-family: 'Muller-Extra-Bold'
-    font-size: 18px
-    border: none
-    border-radius: 5px
-    cursor: pointer
-    @media (max-width: 576px)
-      padding: 12px 20px 10px
-      width: 100%
+.button-main
+  background-color: #f7d100
+  padding: 12px 110px 10px
+  color: #282828
+  text-transform: uppercase
+  font-family: 'Muller-Extra-Bold'
+  font-size: 18px
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  @media (max-width: 576px)
+    padding: 12px 20px 10px
+    width: 100%
 
 .link-more
   color: inherit
@@ -88,3 +97,47 @@ p
     right: 200px
     width: 1px
     background-color: #f9d50f
+
+.mouse-aside
+  position: absolute
+  bottom: 70px
+  right: -30px
+  display: flex
+  padding-left: 30px
+  align-items: center
+  text-transform: uppercase
+  color: #848484
+  font-family: 'Proxima-Nova'
+  font-weight: bold
+  letter-spacing: 2px
+  background-image: url(../images/icons/mouse-icon.png)
+  background-repeat: no-repeat
+  background-position: center left
+  transform: rotate(90deg)
+  span
+    margin-top: 1px
+    font-family: inherit
+  &__line
+    margin-top: 1px
+    width: 15px
+    height: 1px
+    margin-right: 10px
+    background-color: #ebebeb
+
+.extra-bold
+  font-family: 'Muller-Extra-Bold'
+
+.select
+  padding: 10px
+  &-label
+  &-wrap
+    border: 1px solid #bababa
+    border-radius: 5px
+  &-options
+    display: none
+    height: 72px
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      display: none
+  &-option
+    padding: 10px

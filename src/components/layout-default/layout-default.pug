@@ -14,7 +14,10 @@ html(lang='ru')
 
 		link(href='assets/css/style.css' rel='stylesheet')
 	body
-		+header()
-		block content
-		+footer()
-		script(src='assets/js/script.js')
+		.root
+			+header()
+			main.main
+				block content
+			+footer()
+			script(src='assets/js/jquery-3.3.1.min.js')
+			script(src='assets/js/script.js')

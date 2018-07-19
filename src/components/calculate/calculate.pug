@@ -1,0 +1,40 @@
+mixin calculate()
+	+b.calculate
+		.container
+			+b.calculate-top
+				+b('h2').main-title Just $7/hour <br>
+					+e('span').small per operator
+				+e.main
+					+e.bg
+					+e.content
+						p
+							span.extra-bold Remote workers - are professionals working
+							|  outside of a traditional office environment. The concept is: the work does not need to be done in a 					 					 	 specific place to be accomplished successfully. Remote work can be done from anywhere where the           						 internet connection exists.
+						p
+							|The only difference between the remote employee and your office staff - that now you work together
+							span.extra-bold  Online using the latest apps for virtual work:
+							|  chat and communication systems, professional telecommunication base stations and so on.
+						p
+							|At this point, the company starts saving on office-related expenses, equipment, HR, taxes‍. The hourly rate 							 of the
+							span.extra-bold  remote employee on 30%
+							|  lower than the average rate of the on-site employee
+			+b('form').calculate-form
+				+e.left
+					+b('h2').main-title
+						+e('span').small Save up
+						|  to 65% <br> on salaries
+						+e('span').small  today
+					button.button-main(type="button") calculate
+				+e.right
+					+e.selects
+						+e.selects-item
+							.select-label Select State in USA
+							.select-wrap
+								input.input-hidden(type="hidden")
+								.select -
+								.select-options
+									.select-option California
+									.select-option Georgia
+									.select-option Kansas
+									.select-option Minnesota
+					+e.price

@@ -1,8 +1,14 @@
 extends ../components/layout-default/layout-default
 include ../components/steps/steps
+include ../components/video/video
+include ../components/modal-video/modal-video
+include ../components/calculate/calculate
 
 block head
     - var pageTitle = 'Index Page';
 
 block content
+    +modal-video()
     +steps()
+    +video()
+    +calculate()

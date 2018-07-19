@@ -8,7 +8,14 @@ mixin header()
 			+e.top
 				a(href="/")
 					img(src="assets/images/logo.png" width="177" height="38")
+				+e.menu-btn
+					span
+					span
+					span
 				+e('ul').menu
+					+e('li').menu-img
+						a(href="/")
+							img(src="assets/images/logo.png" width="177" height="38")
 					li
 						a(href="#steps") How does it work?
 					li
@@ -19,6 +26,9 @@ mixin header()
 						a(href="#contact") Contact
 			+e.main
 				+e.left
+					.mouse-aside
+						.mouse-aside__line
+						span scroll
 					+e.left-title-wrap
 						h1.main-title Boost Your Revenue Immediately
 					+e.left-desc
@@ -28,7 +38,7 @@ mixin header()
 							Hire a professional starting from $280/week with no extra <br>
 							expenses - only profit.
 					+e.left-bottom
-						button.button-main try now
+						button.button-main(type="button") try now
 						+e('p').left-video-link we recommend that you
 							span.header__left-video-link_btn.video-btn-js  watch the video
 							img(src="assets/images/icons/youtube.png" width="20" height="20")
