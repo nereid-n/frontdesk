@@ -1,0 +1,67 @@
+.more
+	position: relative
+	background-color: #282828
+	color: #ffffff
+	padding: 50px 0
+	.container
+		display: flex
+		flex-wrap: wrap
+	.main-title
+		margin: 0
+	&-main
+		width: 52%
+		padding-right: 30px
+		margin-top: 120px
+		box-sizing: border-box
+		&__text
+			margin: 20px 0 25px 120px
+		&__left-bottom
+			margin-top: 30px
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: fit-content
+		&__span
+			display: block
+			margin-top: 10px
+			text-decoration: underline
+			font-size: 14px
+	&-week
+		width: 48%
+		margin-top: 10px
+		margin-bottom: -80px
+		background-image: url(../images/photo-call.png)
+	&-steps
+		&__title
+			display: block
+			margin: 25px 0 20px 100px
+			color: #f7d100
+			font-family: 'Muller-Extra-Bold'
+		&__items
+			display: flex
+			flex-wrap: wrap
+		&__item
+			display: flex
+			align-items: center
+			width: 170px
+			margin: 10px 0
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+		&__span
+			font-family: 'Muller-Extra-Bold'
+			line-height: 1.4em
+		&__img
+			margin-right: 10px
+
+.more__line1
+	top: 50%
+	left: calc((100% - 1170px) / 4.5)
+
+.more__line2
+	bottom: 20%
+	left: calc((100% - 1170px) / 2.6)
+
+.more__line3
+	top: 40%
+	right: calc((100% - 1170px) / 2.8)

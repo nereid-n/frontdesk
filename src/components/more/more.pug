@@ -1,0 +1,34 @@
+mixin more()
+	+b('section').more
+		.bg__line.more__line1
+		.bg__line.more__line2
+		.bg__line.more__line3
+		a(name="more")
+		.container
+			+b.more-main
+				h1.main-title Create your call center in 3 easy steps
+				+e('p').text
+					|Don’t replace your employees - provide them with comfy telecommunications and make them more productive
+				+b.more-steps
+					+e('span').title Your call center in 3 easy steps:
+					+e.items
+						+e.item
+							+e('img').img(src="../assets/images/icons-big/list.png" width="44" height="44")
+							+e('span').span Place an<br>order
+						+e.item
+							+e('img').img(src="../assets/images/icons-big/delivery-man.png" width="44" height="44")
+							+e('span').span Receive the equipment
+						+e.item
+							+e('img').img(src="../assets/images/icons-big/administration.png" width="44" height="44")
+							+e('span').span Connect to a local network
+				+e.left-bottom
+					button.button-main(type="button") try now
+					+e('span').span $15/month each member
+			+b.more-week.week
+				h2.week__title professional<br>
+					span.week__title_small starting
+				span.week__salary $280/week
+					span.week__line
+				a(href="#").link-more see more
+
+

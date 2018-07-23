@@ -33,20 +33,37 @@ h1
   @media (min-width: 1200px)
     max-width: 1140px
 
+.menu
+  padding: 0
+  margin: 0
+  list-style-type: none
+  display: flex
+  align-items: center
+  li
+    a
+      margin: 0 10px
+      color: #ffffff
+      text-decoration: none
+      text-transform: uppercase
+      font-family: 'Muller-Extra-Bold'
+      &:hover
+        color: #f7d100
+
 .main-title
   text-transform: uppercase
   font-family: 'Muller-Extra-Bold'
+  line-height: 1.2em
   &__small
     font-family: 'Muller'
     font-weight: 400
 
 .button-main
   background-color: #f7d100
-  padding: 12px 110px 10px
+  padding: 14px 110px 12px
   color: #282828
   text-transform: uppercase
   font-family: 'Muller-Extra-Bold'
-  font-size: 18px
+  letter-spacing: 4px
   border: none
   border-radius: 5px
   cursor: pointer
@@ -67,6 +84,8 @@ h1
   text-align: right
   padding: 30px 0
   padding-right: 40px
+  background-repeat: no-repeat
+  background-position: center
   box-sizing: border-box
   overflow: hidden
   .link-more
@@ -82,7 +101,6 @@ h1
     margin-bottom: 10px
     &_small
       text-transform: lowercase
-      padding-right: 5px
   &__salary
     position: relative
     display: block
@@ -128,14 +146,32 @@ h1
   font-family: 'Muller-Extra-Bold'
 
 .select
+  display: flex
+  align-items: center
   padding: 10px
+  background-image: url(../images/icons/arrow-down.png)
+  background-repeat: no-repeat
+  background-size: auto
+  background-position: center right 10px
+  &-img
+    margin-top: -4px
+    margin-bottom: -1px
+    margin-right: 5px
   &-label
+    margin-bottom: 10px
+    margin-left: 5px
+    margin-right: 40px
+    text-transform: uppercase
+    font-weight: bold
   &-wrap
+    position: absolute
+    width: 100%
     border: 1px solid #bababa
     border-radius: 5px
   &-options
     display: none
     height: 72px
+    background-color: #fff
     overflow-y: scroll
     &::-webkit-scrollbar
       display: none

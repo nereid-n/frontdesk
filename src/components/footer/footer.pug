@@ -1,3 +1,28 @@
 mixin footer()
 	+b('footer').footer
-		block
+		a(name="contact")
+		.container
+			+e('img').img(src="assets/images/logo-black.png" width="177" height="38")
+			+e.main
+				+e('ul').menu.menu
+					li
+						a(href="#steps") How does it work?
+					li
+						a(href="#calculate") Calculate
+					li
+						a(href="#more") More our product
+					li
+						a(href="#contact") Contact
+				+e('ul').social.menu
+					li
+						a(href="#")
+							img(src="assets/images/icons/facebook-24.png" width="20" height="20")
+					li
+						a(href="#")
+							img(src="assets/images/icons/google-plus-24.png" width="20" height="20")
+					li
+						a(href="#")
+							img(src="assets/images/icons/linkedin-3-24.png" width="20" height="20")
+					li
+						a(href="#")
+							img(src="assets/images/icons/youtube-24.png" width="20" height="20")

@@ -1,9 +1,9 @@
 mixin header()
 	+b('header').header
-		.header__line.header__line1
-		.header__line.header__line2
-		.header__line.header__line3
-		.header__line.header__line4
+		.bg__line.header__line1
+		.bg__line.header__line2
+		.bg__line.header__line3
+		.bg__line.header__line4
 		.container
 			+e.top
 				a(href="/")
@@ -12,7 +12,7 @@ mixin header()
 					span
 					span
 					span
-				+e('ul').menu
+				+e('ul').menu.menu
 					+e('li').menu-img
 						a(href="/")
 							img(src="assets/images/logo.png" width="177" height="38")
@@ -50,7 +50,7 @@ mixin header()
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 							dolore magna aliqua.
 						a(href="#").link-more see more
 					+e.right-week.week
-						h2.week__title professional <br>
+						h2.week__title professional<br>
 							span.week__title_small starting
 						span.week__salary $280/week
 							span.week__line

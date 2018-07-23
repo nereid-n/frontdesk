@@ -4,7 +4,7 @@ $(document).ready(function() {
   });
   $('.select-option').click(function() {
     var text = $(this).text();
-    $(this).parents('.select-wrap').find('.select').text(text);
+    $(this).parents('.select-wrap').find('.select span').text(text);
     $(this).parents('.select-wrap').find('.input-hidden').text(text);
   });
 });

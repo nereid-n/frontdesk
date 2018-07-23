@@ -10,15 +10,15 @@
   <body>
     <div class="root">
       <header class="header">
-        <div class="header__line header__line1"></div>
-        <div class="header__line header__line2"></div>
-        <div class="header__line header__line3"></div>
-        <div class="header__line header__line4"></div>
+        <div class="bg__line header__line1"></div>
+        <div class="bg__line header__line2"></div>
+        <div class="bg__line header__line3"></div>
+        <div class="bg__line header__line4"></div>
         <div class="container">
           <div class="header__top"><a href="/"><img src="assets/images/logo.png" width="177" height="38"/></a>
             <div class="header__menu-btn"><span></span><span></span><span></span>
             </div>
-            <ul class="header__menu">
+            <ul class="header__menu menu">
               <li class="header__menu-img"><a href="/"><img src="assets/images/logo.png" width="177" height="38"/></a>
               </li>
               <li><a href="#steps">How does it work?</a></li>
@@ -55,7 +55,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 							dolore magna aliqua.</p><a class="link-more" href="#">see more</a>
               </div>
               <div class="header__right-week week">
-                <h2 class="week__title">professional <br><span class="week__title_small">starting</span></h2><span class="week__salary">$280/week<span class="week__line"></span></span><a class="link-more" href="#">see more</a>
+                <h2 class="week__title">professional<br><span class="week__title_small">starting</span></h2><span class="week__salary">$280/week<span class="week__line"></span></span><a class="link-more" href="#">see more</a>
               </div>
               <div class="header__right-about">
                 <div class="header__right-about--main">
@@ -79,7 +79,7 @@
           <div class="modal-video__content">
           </div>
         </div>
-        <section class="steps">
+        <section class="steps"><a name="steps"></a>
           <div class="container">
             <div class="steps-top">
               <h1 class="main-title">how does it work?</h1>
@@ -115,7 +115,7 @@
             </button>
           </div>
         </section>
-        <div class="calculate">
+        <section class="calculate">
           <div class="container">
             <div class="calculate-top">
               <h2 class="main-title">Just $7/hour <br><span class="main-title__small">per operator</span>
@@ -129,10 +129,10 @@
                   <p>At this point, the company starts saving on office-related expenses, equipment, HR, taxes‍. The hourly rate 							 of the<span class="extra-bold"> remote employee on 30%</span> lower than the average rate of the on-site employee</p>
                 </div>
               </div>
-            </div>
+            </div><a name="calculate"></a>
             <form class="calculate-form">
               <div class="calculate-form__left">
-                <h2 class="main-title"><span class="main-title__small">Save up</span> to 65% <br> on salaries<span class="main-title__small"> today</span>
+                <h2 class="main-title">Save up<span class="main-title__small"> to 65%<br> on salaries</span> today
                 </h2>
                 <button class="button-main" type="button">calculate</button>
               </div>
@@ -142,7 +142,7 @@
                     <div class="select-label">Select State in USA</div>
                     <div class="select-wrap">
                       <input class="input-hidden" type="hidden"/>
-                      <div class="select">-</div>
+                      <div class="select"><span>-</span></div>
                       <div class="select-options">
                         <div class="select-option">California</div>
                         <div class="select-option">Georgia</div>
@@ -151,15 +151,110 @@
                       </div>
                     </div>
                   </div>
+                  <div class="calculate-form__selects-item">
+                    <div class="select-label">Select Service</div>
+                    <div class="select-wrap">
+                      <input class="input-hidden" type="hidden"/>
+                      <div class="select"><span>-</span></div>
+                      <div class="select-options">
+                        <div class="select-option">fdh.cloud</div>
+                        <div class="select-option">fdh.cloud</div>
+                        <div class="select-option">fdh.cloud</div>
+                        <div class="select-option">fdh.cloud</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculate-form__selects-item">
+                    <div class="select-label">Employees</div>
+                    <div class="select-wrap">
+                      <input class="input-hidden" type="hidden"/>
+                      <div class="select"><img class="select-img" src="assets/images/icons/user.png" width="20" height="20"/><span>-</span></div>
+                      <div class="select-options">
+                        <div class="select-option">10</div>
+                        <div class="select-option">15</div>
+                        <div class="select-option">20</div>
+                        <div class="select-option">30</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculate-form__selects-item">
+                    <div class="select-label">In week</div>
+                    <div class="select-wrap">
+                      <input class="input-hidden" type="hidden"/>
+                      <div class="select"><img class="select-img" src="assets/images/icons/clock.png" width="20" height="20"/><span>-</span></div>
+                      <div class="select-options">
+                        <div class="select-option">10 hour</div>
+                        <div class="select-option">11 hour</div>
+                        <div class="select-option">12 hour</div>
+                        <div class="select-option">13 hour</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="calculate-form__price">
+                  <div class="calculate-form__price-item">
+                    <div class="calculate-form__price-main">$14
+                    </div>
+                    <div class="calculate-form__price-title">standard price
+                    </div>
+                  </div>
+                  <div class="calculate-form__price-item">
+                    <div class="calculate-form__price-main calculate-form__price-main--advantageous">$7
+                    </div>
+                    <div class="calculate-form__price-title">our advantageous offer
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
           </div>
-        </div>
+        </section>
+        <section class="more">
+          <div class="bg__line more__line1"></div>
+          <div class="bg__line more__line2"></div>
+          <div class="bg__line more__line3"></div><a name="more"></a>
+          <div class="container">
+            <div class="more-main">
+              <h1 class="main-title">Create your call center in 3 easy steps</h1>
+              <p class="more-main__text">Don’t replace your employees - provide them with comfy telecommunications and make them more productive
+              </p>
+              <div class="more-steps"><span class="more-steps__title">Your call center in 3 easy steps:</span>
+                <div class="more-steps__items">
+                  <div class="more-steps__item"><img class="more-steps__img" src="../assets/images/icons-big/list.png" width="44" height="44" alt="" role="presentation"/><span class="more-steps__span">Place an<br>order</span>
+                  </div>
+                  <div class="more-steps__item"><img class="more-steps__img" src="../assets/images/icons-big/delivery-man.png" width="44" height="44" alt="" role="presentation"/><span class="more-steps__span">Receive the equipment</span>
+                  </div>
+                  <div class="more-steps__item"><img class="more-steps__img" src="../assets/images/icons-big/administration.png" width="44" height="44" alt="" role="presentation"/><span class="more-steps__span">Connect to a local network</span>
+                  </div>
+                </div>
+              </div>
+              <div class="more-main__left-bottom">
+                <button class="button-main" type="button">try now</button><span class="more-main__span">$15/month each member</span>
+              </div>
+            </div>
+            <div class="more-week week">
+              <h2 class="week__title">professional<br><span class="week__title_small">starting</span></h2><span class="week__salary">$280/week<span class="week__line"></span></span><a class="link-more" href="#">see more</a>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer">
+      <footer class="footer"><a name="contact"></a>
+        <div class="container"><img class="footer__img" src="assets/images/logo-black.png" width="177" height="38" alt="" role="presentation"/>
+          <div class="footer__main">
+            <ul class="footer__menu menu">
+              <li><a href="#steps">How does it work?</a></li>
+              <li><a href="#calculate">Calculate</a></li>
+              <li><a href="#more">More our product</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="footer__social menu">
+              <li><a href="#"><img src="assets/images/icons/facebook-24.png" width="20" height="20"/></a></li>
+              <li><a href="#"><img src="assets/images/icons/google-plus-24.png" width="20" height="20"/></a></li>
+              <li><a href="#"><img src="assets/images/icons/linkedin-3-24.png" width="20" height="20"/></a></li>
+              <li><a href="#"><img src="assets/images/icons/youtube-24.png" width="20" height="20"/></a></li>
+            </ul>
+          </div>
+        </div>
       </footer>
       <script src="assets/js/jquery-3.3.1.min.js"></script>
       <script src="assets/js/script.js"></script>
