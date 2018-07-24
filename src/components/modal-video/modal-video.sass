@@ -13,9 +13,26 @@
 	z-index: 200
 	visibility: hidden
 	&__content
-		width: 50%
-		height: 50%
+		max-height: 90%
+		position: relative
+		width: 60%
 		background-color: #ffffff
+		@media (max-width: 991px)
+			width: 90%
+	&__video
+		width: 100%
 	&-show
 		visibility: visible
 		opacity: 1
+	&__btn-close
+		position: absolute
+		top: 0
+		right: 0
+		width: 35px
+		height: 35px
+		background-color: #f7d100
+		font-family: 'Muller-Extra-Bold'
+		font-size: 26px
+		border: none
+		z-index: 10
+		cursor: pointer

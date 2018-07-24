@@ -7,10 +7,17 @@
 		bottom: 180px
 		display: flex
 		align-items: flex-end
+		@media (max-width: 991px)
+			bottom: 0
+			flex-wrap: wrap
 		.main-title
 			min-width: 200px
 			margin-bottom: 96px
 			margin-left: 150px
+			@media (max-width: 1200px)
+				margin-left: 0
+			@media (max-width: 991px)
+				margin-bottom: 10px
 		&__bg
 			position: absolute
 			left: 0
@@ -22,6 +29,9 @@
 			position: relative
 			padding: 40px 60px 80px
 			padding-right: 0
+			@media (max-width: 575px)
+				padding-left: 15px
+				padding-right: 15px
 		&__content
 			position: relative
 	&-form
@@ -33,6 +43,14 @@
 		width: 80%
 		background-color: #ffffff
 		z-index: 5
+		@media (max-width: 1200px)
+			left: 0
+			width: 100%
+		@media (max-width: 991px)
+			position: unset
+			margin-top: 30px
+			flex-wrap: wrap
+			box-sizing: border-box
 		&__left
 			display: flex
 			flex-direction: column
@@ -41,6 +59,15 @@
 			width: 30%
 			margin-left: -12%
 			padding-right: 30px
+			@media (max-width: 1200px)
+				width: 25%
+				margin-left: -50px
+			@media (max-width: 991px)
+				width: 100%
+				margin-bottom: 20px
+				margin-left: 0
+				padding-right: 0
+				align-items: center
 			.main-title
 				text-align: right
 			.button-main
@@ -48,8 +75,13 @@
 				padding-right: 20px
 		&__right
 			width: 82%
+			@media (max-width: 1200px)
+				width: 75%
+			@media (max-width: 991px)
+				width: 100%
 		&__selects
 			display: flex
+			flex-wrap: wrap
 			margin: 0 -10px
 			&-item
 				position: relative
@@ -63,6 +95,8 @@
 			margin-top: 20px
 			padding: 7px 0 5px
 			background-color: #282828
+			@media (max-width: 991px)
+				width: 100%
 			&-item
 				display: flex
 				flex-direction: column

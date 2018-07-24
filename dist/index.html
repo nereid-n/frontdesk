@@ -44,8 +44,9 @@
               </div>
               <div class="header__left-bottom">
                 <button class="button-main" type="button">try now</button>
-                <p class="header__left-video-link">we recommend that you<span class="header__left-video-link_btn video-btn-js"> watch the video</span><img src="assets/images/icons/youtube.png" width="20" height="20"/>
-                </p>
+                <div class="header__left-video-link">
+                  <p>we recommend that you<span class="header__left-video-link_btn video-btn-js">watch the video</span></p><img src="assets/images/icons/youtube.png" width="20" height="20"/>
+                </div>
               </div>
             </div>
             <div class="header__right">
@@ -76,7 +77,12 @@
       </header>
       <main class="main">
         <div class="modal-video">
-          <div class="modal-video__content">
+          <div class="modal-video__content modal-video__content-js">
+            <button class="modal-video__btn-close modal-video__btn-close-js">x
+            </button>
+            <video class="modal-video__video" controls="controls">
+              <source src="assets/video/post_video.mp4" type="video/mp4"/>
+            </video>
           </div>
         </div>
         <section class="steps"><a name="steps"></a>
@@ -132,7 +138,7 @@
             </div><a name="calculate"></a>
             <form class="calculate-form">
               <div class="calculate-form__left">
-                <h2 class="main-title">Save up<span class="main-title__small"> to 65%<br> on salaries</span> today
+                <h2 class="main-title">Save up<span class="main-title__small"> to 65% on salaries</span> today
                 </h2>
                 <button class="button-main" type="button">calculate</button>
               </div>

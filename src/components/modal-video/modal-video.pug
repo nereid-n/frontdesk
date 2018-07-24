@@ -1,3 +1,6 @@
 mixin modal-video()
 	+b.modal-video
-		+e.content
+		+e.content.__content-js
+			+e('button').btn-close.__btn-close-js x
+			+e('video').video(controls="controls")
+				source(src="assets/video/post_video.mp4" type="video/mp4")

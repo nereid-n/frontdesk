@@ -5,9 +5,13 @@
 		justify-content: space-between
 		align-items: center
 		margin-top: 20px
+		@media (max-width: 991px)
+			flex-direction: column
 	&__img
 		padding-left: 10px
 	&__social
+		@media (max-width: 991px)
+			margin-top: 10px
 		li
 			a
 				display: flex
@@ -19,6 +23,9 @@
 				background-color: #282828
 				border-radius: 50%
 	&__menu
+		flex-wrap: wrap
+		justify-content: center
 		li
+			margin: 15px
 			a
 				color: #282828
