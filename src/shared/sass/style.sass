@@ -1,5 +1,5 @@
 *
-  font-family: 'Muller'
+  font-family: 'Muller', 'Arial', sans-serif
 
 body
   margin: 0
@@ -46,6 +46,7 @@ h1
       text-decoration: none
       text-transform: uppercase
       font-family: 'Muller-Extra-Bold'
+      transition: all ease 0.5s
       &:hover
         color: #f7d100
 
@@ -67,9 +68,12 @@ h1
   border: none
   border-radius: 5px
   cursor: pointer
+  transition: all ease 0.7s
   @media (max-width: 576px)
     padding: 12px 20px 10px
     width: 100%
+  &:hover
+    transform: scale(1.1)
 
 .link-more
   color: inherit
@@ -78,6 +82,8 @@ h1
   background-repeat: no-repeat
   background-position: center right
   padding-right: 20px
+  &:hover
+    text-decoration: none
 
 .week
   color: #ffffff
@@ -147,6 +153,7 @@ h1
 
 .extra-bold
   font-family: 'Muller-Extra-Bold'
+  font-weight: bold
 
 .select
   display: flex
