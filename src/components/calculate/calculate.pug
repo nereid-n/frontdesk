@@ -32,52 +32,81 @@ mixin calculate()
 							.select-label Select State in USA
 							.select-wrap
 								input.input-hidden(type="hidden")
-								.select
-									span -
+								.select.js-currStatePrice(data-currPrice="0", data-ourPrice="7")
+									span Alabama
 								.select-options
-									.select-option California
-									.select-option Georgia
-									.select-option Kansas
-									.select-option Minnesota
+									.select-option.js-statePrice(data-basePrice="7.25", data-tax="6.2+1.45+3") Alabama
+									.select-option.js-statePrice(data-basePrice="9.84", data-tax="6.2+1.45+4") Alaska
+									.select-option.js-statePrice(data-basePrice="10.50", data-tax="6.2+1.45+6") Arizona
+									.select-option.js-statePrice(data-basePrice="8.50", data-tax="6.2+1.45+10") Arkansas
+									.select-option.js-statePrice(data-basePrice="11.001", data-tax="6.2+1.45+4") California
+									.select-option.js-statePrice(data-basePrice="10.20", data-tax="6.2+1.45+6") Colorado
+									.select-option.js-statePrice(data-basePrice="10.10", data-tax="6.2+1.45+4") Connecticut
+									.select-option.js-statePrice(data-basePrice="8.25", data-tax="6.2+1.45+5") Delaware
+									.select-option.js-statePrice(data-basePrice="13.25", data-tax="6.2+1.45+4") District of Columbia
+									.select-option.js-statePrice(data-basePrice="8.25", data-tax="6.2+1.45+4") Florida
+									.select-option.js-statePrice(data-basePrice="7.25", data-tax="6.2+1.45+5") Georgia
+									.select-option.js-statePrice(data-basePrice="10.10", data-tax="6.2+1.45+3") Hawaii
 						+e.selects-item
 							.select-label Select Service
 							.select-wrap
 								input.input-hidden(type="hidden")
 								.select
-									span -
+									span Help desk support
 								.select-options
-									.select-option fdh.cloud
-									.select-option fdh.cloud
-									.select-option fdh.cloud
-									.select-option fdh.cloud
+									.select-option Help desk support
+									.select-option Call center - inbound/outbound
+									.select-option Telemarketing operator
+									.select-option Telecommunication manager
+									.select-option Market survey/research
+									.select-option Data entry operator
+									.select-option Virtual receptionist
+									.select-option Bookkeeping
+									.select-option Outsourcing of HR/Other services
+									.select-option Remote technical support services
+									.select-option Outsource dispatch operator
+									.select-option Dispatch services
 						+e.selects-item
 							.select-label Employees
 							.select-wrap
 								input.input-hidden(type="hidden")
-								.select
+								.select.js-currEmployee(data-currEmployee="1")
 									img.select-img(src="assets/images/icons/user.png" width="20" height="20")
-									span -
+									span 1
 								.select-options
-									.select-option 10
-									.select-option 15
-									.select-option 20
-									.select-option 30
+									.select-option.js-employee(data-employee="1") 1
+									.select-option.js-employee(data-employee="2") 2
+									.select-option.js-employee(data-employee="3") 3
+									.select-option.js-employee(data-employee="4") 4
+									.select-option.js-employee(data-employee="5") 5
+									.select-option.js-employee(data-employee="5") 5
+									.select-option.js-employee(data-employee="6") 6
+									.select-option.js-employee(data-employee="7") 7
+									.select-option.js-employee(data-employee="8") 8
+									.select-option.js-employee(data-employee="9") 9
+									.select-option.js-employee(data-employee="10") 10
+									.select-option.js-employee(data-employee="10+") 10+
 						+e.selects-item
 							.select-label In week
 							.select-wrap
 								input.input-hidden(type="hidden")
-								.select
+								.select.js-currTime(data-currTime="1")
 									img.select-img(src="assets/images/icons/clock.png" width="20" height="20")
-									span -
+									span 1 hour
 								.select-options
-									.select-option 10 hour
-									.select-option 11 hour
-									.select-option 12 hour
-									.select-option 13 hour
+									.select-option.js-time(data-time="1") 1 hour
+									.select-option.js-time(data-time="5") 5 hour
+									.select-option.js-time(data-time="10") 10 hour
+									.select-option.js-time(data-time="10") 15 hour
+									.select-option.js-time(data-time="20") 20 hour
+									.select-option.js-time(data-time="30") 30 hour
+									.select-option.js-time(data-time="40") 40 hour
+									.select-option.js-time(data-time="50") 50 hour
+									.select-option.js-time(data-time="999") 50+ hour
 					+e.price
 						+e.price-item
-							+e.price-main $14
+							+e.price-main.js-stateFinalPrice $14
 							+e.price-title standard price
 						+e.price-item
-							+e.price-main.__price-main--advantageous $7
+							+e.price-main.__price-main--advantageous.js-ourFinalPrice $7
 							+e.price-title our advantageous offer
