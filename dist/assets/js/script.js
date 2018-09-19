@@ -32,17 +32,20 @@ var Calculator = function () {
     this.currStatePriceEl = document.querySelector('.js-currStatePrice');
     this.currEmployeeEl = document.querySelector('.js-currEmployee');
     this.currHrsWeekEl = document.querySelector('.js-currTime');
-    this.finalPrice = document.querySelector('.js-stateFinalPrice');
+    this.stateFinalPrice = document.querySelector('.js-stateFinalPrice');
+    this.stateOfferPrice = document.querySelector('.js-statePrice');
     this.ourFinalPrice = document.querySelector('.js-ourFinalPrice');
-    this.defaultStatePrice = document.querySelector('.js-statePrice');
-    this.ourPrice = 7;
-
-    this.writeCurrentPrice(this.defaultStatePrice);
+    this.ourOfferPrice = document.querySelector('.js-ourPrice');
+    this.defaultStatePrice = document.querySelector('[data-type="price"]');
+    this.ourPrice = Number(this.currStatePriceEl.getAttribute('data-ourPrice'));
+    this.statePrice = 0;
+    this.getAndSetCurrentPrice(this.defaultStatePrice);
   }
 
   /**
    * calculate price for 1hr in current state
    *
+   * @param el
    * @returns {number}
    */
 
@@ -57,12 +60,13 @@ var Calculator = function () {
       for (var i = 0; i < taxArr.length; i++) {
         tax += Number(taxArr[i]);
       }
-      return Math.round(Number(price) * (1 + tax / 100));
+      return Math.round(Number(price) * (1 + tax / 100) * 100) / 100;
     }
 
     /**
      * calculate final price
      *
+     * @param type - type state price or beacons
      * @param employee
      * @param hrs
      * @returns {number}
@@ -70,8 +74,12 @@ var Calculator = function () {
 
   }, {
     key: 'priceCalc',
-    value: function priceCalc(employee, hrs) {
-      return Number(this.currStatePriceEl.getAttribute('data-currPrice')) * hrs * employee;
+    value: function priceCalc(type, employee, hrs) {
+      if (type === 'state') {
+        return Math.round(Number(this.currStatePriceEl.getAttribute('data-currPrice')) * hrs * employee * 100) / 100;
+      } else if (type === 'our') {
+        return Math.round(this.ourPrice * hrs * employee * 100) / 100;
+      }
     }
   }, {
     key: 'getHrs',
@@ -83,12 +91,51 @@ var Calculator = function () {
     value: function getEmployees() {
       return Number(this.currEmployeeEl.getAttribute('data-currEmployee'));
     }
+
+    /**
+     * get element attribute
+     *
+     * @param el - element on click
+     */
+
   }, {
-    key: 'writeCurrentPrice',
-    value: function writeCurrentPrice(el) {
+    key: 'getAttribute',
+    value: function getAttribute(el) {
+      var dataType = el.getAttribute('data-type');
+
+      if (dataType === 'price') {
+        var price = this.priceHrCalc(el);
+        this.statePrice = price;
+        this.currStatePriceEl.setAttribute('data-currPrice', price);
+      }
+
+      if (dataType === 'time') {
+        var time = el.getAttribute('data-time');
+        this.currHrsWeekEl.setAttribute('data-currTime', time);
+      }
+
+      if (dataType === 'employee') {
+        var employee = el.getAttribute('data-employee');
+        this.currEmployeeEl.setAttribute('data-currEmployee', employee);
+      }
+    }
+
+    /**
+     * calculate price and write it to fields
+     *
+     * @param el - element on click
+     */
+
+  }, {
+    key: 'getAndSetCurrentPrice',
+    value: function getAndSetCurrentPrice(el) {
+      this.getAttribute(el);
       var hrs = this.getHrs();
       var employees = this.getEmployees();
-      this.finalPrice.innerHTML = '$' + this.priceCalc(el, hrs, employees);
+      this.stateOfferPrice.innerHTML = '$' + this.statePrice;
+      this.stateFinalPrice.innerHTML = '$' + this.priceCalc('state', hrs, employees);
+      this.ourOfferPrice.innerHTML = '$' + this.ourPrice;
+      this.ourFinalPrice.innerHTML = '$' + this.priceCalc('our', hrs, employees);
     }
   }]);
 
@@ -106,13 +153,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  for (var j = 0; j < options.length; j++) {
+  var _loop = function _loop(j) {
     options[j].addEventListener('click', function () {
       var text = this.innerHTML;
       var parent = this.closest('.select-wrap');
       parent.querySelector('.select span').innerHTML = text;
       parent.querySelector('.input-hidden').value = text;
+
+      calc.getAndSetCurrentPrice(options[j]);
     });
+  };
+
+  for (var j = 0; j < options.length; j++) {
+    _loop(j);
   }
 });
 //# sourceMappingURL=script.js.map
