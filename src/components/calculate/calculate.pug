@@ -20,101 +20,103 @@ mixin calculate()
 							|  lower than the average rate of the on-site employee
 			a(name="calculate")
 			+b('form').calculate-form
-				+e.left
-					+b('h2').main-title
-						|Save up
-						+e('span').small  to 65% on salaries
-						|  today
-					button.button-main(type="button") calculate
-				+e.right
-					+e.selects
-						+e.selects-item
-							.select-label Select State in USA
-							.select-wrap
-								input.input-hidden(type="hidden")
-								.select.js-currStatePrice(data-currPrice="0", data-ourPrice="7")
-									span Alabama
-								.select-options
-									.select-option(data-type="price", data-basePrice="7.25", data-tax="6.2+1.45+3") Alabama
-									.select-option(data-type="price", data-basePrice="9.84", data-tax="6.2+1.45+4") Alaska
-									.select-option(data-type="price", data-basePrice="10.50", data-tax="6.2+1.45+6") Arizona
-									.select-option(data-type="price", data-basePrice="8.50", data-tax="6.2+1.45+10") Arkansas
-									.select-option(data-type="price", data-basePrice="11.001", data-tax="6.2+1.45+4") California
-									.select-option(data-type="price", data-basePrice="10.20", data-tax="6.2+1.45+6") Colorado
-									.select-option(data-type="price", data-basePrice="10.10", data-tax="6.2+1.45+4") Connecticut
-									.select-option(data-type="price", data-basePrice="8.25", data-tax="6.2+1.45+5") Delaware
-									.select-option(data-type="price", data-basePrice="13.25", data-tax="6.2+1.45+4") District of Columbia
-									.select-option(data-type="price", data-basePrice="8.25", data-tax="6.2+1.45+4") Florida
-									.select-option(data-type="price", data-basePrice="7.25", data-tax="6.2+1.45+5") Georgia
-									.select-option(data-type="price", data-basePrice="10.10", data-tax="6.2+1.45+3") Hawaii
-						+e.selects-item
-							.select-label Select Service
-							.select-wrap
-								input.input-hidden(type="hidden")
-								.select
-									span Help desk support
-								.select-options
-									.select-option Help desk support
-									.select-option Call center - inbound/outbound
-									.select-option Telemarketing operator
-									.select-option Telecommunication manager
-									.select-option Market survey/research
-									.select-option Data entry operator
-									.select-option Virtual receptionist
-									.select-option Bookkeeping
-									.select-option Outsourcing of HR/Other services
-									.select-option Remote technical support services
-									.select-option Outsource dispatch operator
-									.select-option Dispatch services
-						+e.selects-item
-							.select-label Employees
-							.select-wrap
-								input.input-hidden(type="hidden")
-								.select.js-currEmployee(data-currEmployee="1")
-									img.select-img(src="assets/images/icons/user.png" width="20" height="20")
-									span 1
-								.select-options
-									.select-option(data-type="employee", data-employee="1") 1
-									.select-option(data-type="employee", data-employee="2") 2
-									.select-option(data-type="employee", data-employee="3") 3
-									.select-option(data-type="employee", data-employee="4") 4
-									.select-option(data-type="employee", data-employee="5") 5
-									.select-option(data-type="employee", data-employee="5") 5
-									.select-option(data-type="employee", data-employee="6") 6
-									.select-option(data-type="employee", data-employee="7") 7
-									.select-option(data-type="employee", data-employee="8") 8
-									.select-option(data-type="employee", data-employee="9") 9
-									.select-option(data-type="employee", data-employee="10") 10
-									.select-option(data-type="employee", data-employee="15") 15
-									.select-option(data-type="employee", data-employee="20") 20
-						+e.selects-item
-							.select-label In week
-							.select-wrap
-								input.input-hidden(type="hidden")
-								.select.js-currTime(data-currTime="1")
-									img.select-img(src="assets/images/icons/clock.png" width="20" height="20")
-									span 1 hour
-								.select-options
-									.select-option(data-type="time", data-time="1") 1 hour
-									.select-option(data-type="time", data-time="5") 5 hour
-									.select-option(data-type="time", data-time="10") 10 hour
-									.select-option(data-type="time", data-time="10") 15 hour
-									.select-option(data-type="time", data-time="20") 20 hour
-									.select-option(data-type="time", data-time="30") 30 hour
-									.select-option(data-type="time", data-time="40") 40 hour
-									.select-option(data-type="time", data-time="50") 50 hour
-									.select-option(data-type="time", data-time="55") 55 hour
-									.select-option(data-type="time", data-time="60") 60 hour
-					+e.price
-						+e.price-item
-							+e.price-main
-								+b('span').js-stateFinalPrice $14
-								+b('span') &nbsp;/&nbsp;
-								+b('span').js-statePrice $14
-							+e.price-title standard price
-						+e.price-item
-							+e.price-main.__price-main--advantageous
-								+b('span').js-ourFinalPrice $7
-								+b('span') &nbsp;/&nbsp;
-								+b('span').js-ourPrice $7
-							+e.price-title our advantageous offer
+				+e.wrap
+					+e.left
+						+b('h2').main-title
+							|Save up
+							+e('span').small  to 65% on salaries
+							|  today
+						button.button-main(type="button") calculate
+					+e.right
+						+e.selects
+							+e.selects-item
+								.select-label Select State in USA
+								.select-wrap
+									input.input-hidden(type="hidden")
+									.select.js-currStatePrice(data-currPrice="0", data-ourPrice="7")
+										span Alabama
+									.select-options
+										.select-option(data-type="price", data-basePrice="7.25", data-tax="6.2+1.45+3") Alabama
+										.select-option(data-type="price", data-basePrice="9.84", data-tax="6.2+1.45+4") Alaska
+										.select-option(data-type="price", data-basePrice="10.50", data-tax="6.2+1.45+6") Arizona
+										.select-option(data-type="price", data-basePrice="8.50", data-tax="6.2+1.45+10") Arkansas
+										.select-option(data-type="price", data-basePrice="11.001", data-tax="6.2+1.45+4") California
+										.select-option(data-type="price", data-basePrice="10.20", data-tax="6.2+1.45+6") Colorado
+										.select-option(data-type="price", data-basePrice="10.10", data-tax="6.2+1.45+4") Connecticut
+										.select-option(data-type="price", data-basePrice="8.25", data-tax="6.2+1.45+5") Delaware
+										.select-option(data-type="price", data-basePrice="13.25", data-tax="6.2+1.45+4") District of Columbia
+										.select-option(data-type="price", data-basePrice="8.25", data-tax="6.2+1.45+4") Florida
+										.select-option(data-type="price", data-basePrice="7.25", data-tax="6.2+1.45+5") Georgia
+										.select-option(data-type="price", data-basePrice="10.10", data-tax="6.2+1.45+3") Hawaii
+							+e.selects-item
+								.select-label Select Service
+								.select-wrap
+									input.input-hidden(type="hidden")
+									.select
+										span Help desk support
+									.select-options
+										.select-option Help desk support
+										.select-option Call center - inbound/outbound
+										.select-option Telemarketing operator
+										.select-option Telecommunication manager
+										.select-option Market survey/research
+										.select-option Data entry operator
+										.select-option Virtual receptionist
+										.select-option Bookkeeping
+										.select-option Outsourcing of HR/Other services
+										.select-option Remote technical support services
+										.select-option Outsource dispatch operator
+										.select-option Dispatch services
+							+e.selects-item
+								.select-label Employees
+								.select-wrap
+									input.input-hidden(type="hidden")
+									.select.js-currEmployee(data-currEmployee="1")
+										img.select-img(src="assets/images/icons/user.png" width="20" height="20")
+										span 1
+									.select-options
+										.select-option(data-type="employee", data-employee="1") 1
+										.select-option(data-type="employee", data-employee="2") 2
+										.select-option(data-type="employee", data-employee="3") 3
+										.select-option(data-type="employee", data-employee="4") 4
+										.select-option(data-type="employee", data-employee="5") 5
+										.select-option(data-type="employee", data-employee="5") 5
+										.select-option(data-type="employee", data-employee="6") 6
+										.select-option(data-type="employee", data-employee="7") 7
+										.select-option(data-type="employee", data-employee="8") 8
+										.select-option(data-type="employee", data-employee="9") 9
+										.select-option(data-type="employee", data-employee="10") 10
+										.select-option(data-type="employee", data-employee="15") 15
+										.select-option(data-type="employee", data-employee="20") 20
+							+e.selects-item
+								.select-label In week
+								.select-wrap
+									input.input-hidden(type="hidden")
+									.select.js-currTime(data-currTime="1")
+										img.select-img(src="assets/images/icons/clock.png" width="20" height="20")
+										span 1 hour
+									.select-options
+										.select-option(data-type="time", data-time="1") 1 hour
+										.select-option(data-type="time", data-time="5") 5 hour
+										.select-option(data-type="time", data-time="10") 10 hour
+										.select-option(data-type="time", data-time="10") 15 hour
+										.select-option(data-type="time", data-time="20") 20 hour
+										.select-option(data-type="time", data-time="30") 30 hour
+										.select-option(data-type="time", data-time="40") 40 hour
+										.select-option(data-type="time", data-time="50") 50 hour
+										.select-option(data-type="time", data-time="55") 55 hour
+										.select-option(data-type="time", data-time="60") 60 hour
+						+e.price
+							+e.price-item
+								+e.price-main
+									+b('span').js-stateFinalPrice $14
+									+b('span') &nbsp;/&nbsp;
+									+b('span').js-statePrice $14
+								+e.price-title standard price
+							+e.price-item
+								+e.price-main.__price-main--advantageous
+									+b('span').js-ourFinalPrice $7
+									+b('span') &nbsp;/&nbsp;
+									+b('span').js-ourPrice $7
+								+e.price-title our advantageous offer
+				+b('p').calculate-form__disclamer Base wage is calculated with minimal wage+FICA taxes + Unemployment Insurance

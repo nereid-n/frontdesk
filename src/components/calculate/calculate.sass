@@ -38,11 +38,15 @@
 		position: absolute
 		left: 10%
 		top: 170px
-		display: flex
-		padding: 60px 20px 70px
-		width: 80%
-		background-color: #ffffff
 		z-index: 5
+
+		display: flex
+		flex-wrap: wrap
+		width: 80%
+		padding: 60px 20px 40px
+
+		background-color: #ffffff
+
 		@media (max-width: 1200px)
 			left: 0
 			width: 100%
@@ -51,6 +55,14 @@
 			margin-top: 30px
 			flex-wrap: wrap
 			box-sizing: border-box
+
+		&__wrap
+			display: flex
+
+		&__disclamer
+			width: 100%
+			text-align: center
+
 		&__left
 			display: flex
 			flex-direction: column

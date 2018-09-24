@@ -8,23 +8,6 @@ var Shared = function Shared() {
   _classCallCheck(this, Shared);
 };
 
-$(document).ready(function () {
-  $('.header__menu-btn').click(function () {
-    $('.header__menu').toggleClass('header__menu_show');
-  });
-});
-$(document).ready(function () {
-  $('.video-btn-js').click(function () {
-    $('.modal-video').addClass('modal-video-show');
-  });
-  $('.modal-video').click(function (e) {
-    var block = $('.modal-video__content-js');
-    if (!block.is(e.target) && block.has(e.target).length === 0 || $('.modal-video__btn-close-js').is(e.target)) {
-      $('.modal-video').removeClass('modal-video-show');
-    }
-  });
-});
-
 var Calculator = function () {
   function Calculator() {
     _classCallCheck(this, Calculator);
@@ -167,5 +150,22 @@ document.addEventListener('DOMContentLoaded', function () {
   for (var j = 0; j < options.length; j++) {
     _loop(j);
   }
+});
+
+$(document).ready(function () {
+  $('.header__menu-btn').click(function () {
+    $('.header__menu').toggleClass('header__menu_show');
+  });
+});
+$(document).ready(function () {
+  $('.video-btn-js').click(function () {
+    $('.modal-video').addClass('modal-video-show');
+  });
+  $('.modal-video').click(function (e) {
+    var block = $('.modal-video__content-js');
+    if (!block.is(e.target) && block.has(e.target).length === 0 || $('.modal-video__btn-close-js').is(e.target)) {
+      $('.modal-video').removeClass('modal-video-show');
+    }
+  });
 });
 //# sourceMappingURL=script.js.map
