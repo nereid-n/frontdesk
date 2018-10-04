@@ -1,56 +1,76 @@
 .steps
-	padding: 60px 0
-	&-top
-		width: 70%
-		display: flex
-		align-items: center
-		margin-left: 25%
-		margin-bottom: 20px
-		@media (max-width: 992px)
-			width: 100%
-			flex-wrap: wrap
-			margin-left: 0
-		.main-title
-			width: 25%
-			@media (max-width: 992px)
-				width: 100%
-		&__desc
-			width: 75%
-			@media (max-width: 992px)
-				width: 100%
-	&-main
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
-		margin: 0 -15px
-		@media (max-width: 600px)
-			justify-content: center
-			margin: 0
-		&__item
-			position: relative
-			display: flex
-			flex-direction: column
-			align-items: center
-			width: 180px
-			margin: 20px 15px 0
-			@media (max-width: 600px)
-				margin: 20px 30px 0
-			&:before
-				position: absolute
-				top: 25px
-				left: -40px
-				content: ""
-				width: 28px
-				height: 15px
-				background-image: url(../images/icons/dot-arrow.png)
-			&:first-child:before
-					display: none
-		&__number
-			margin-top: 10px
-			margin-bottom: 5px
-			font-family: 'Muller-Extra-Bold'
-			text-transform: uppercase
-		&__title
-			margin-bottom: 15px
-			font-weight: bold
-			text-align: center
+  padding: 60px 0
+  &-top
+    width: 70%
+    display: flex
+    align-items: center
+    margin-left: 25%
+    margin-bottom: 20px
+    @media (max-width: 992px)
+      width: 100%
+      flex-wrap: wrap
+      margin-left: 0
+    .main-title
+      width: 25%
+      @media (max-width: 992px)
+        width: 100%
+    &__desc
+      width: 75%
+      @media (max-width: 992px)
+        width: 100%
+  &-main
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 0 -15px
+    @media (max-width: 600px)
+      justify-content: center
+      margin: 0
+    &__item
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 180px
+      margin: 20px 15px 0
+      @media (max-width: 600px)
+        margin: 20px 30px 0
+      @media (max-width: 480px)
+        display: flex !important
+        width: 300px !important
+        margin: 20px auto
+      @media (max-width: 340px)
+        width: 285px !important
+      &:before
+        position: absolute
+        top: 25px
+        left: -40px
+        content: ""
+        width: 28px
+        height: 15px
+        background-image: url(../images/icons/dot-arrow.png)
+        @media (max-width: 480px)
+          display: none
+      &:first-child:before
+        display: none
+    &__number
+      margin-top: 10px
+      margin-bottom: 5px
+      font-family: 'Muller-Extra-Bold'
+      text-transform: uppercase
+      @media (max-width: 480px)
+        &:before
+          position: absolute
+          top: 0
+          right: 0
+          content: ""
+          width: 28px
+          height: 15px
+          background-image: url(../images/icons/dot-arrow.png)
+    &__title
+      margin-bottom: 15px
+      font-weight: bold
+      text-align: center
+
+.slick-slide:last-child .steps-main__number:before
+  display: none

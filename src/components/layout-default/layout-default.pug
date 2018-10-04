@@ -12,6 +12,8 @@ html(lang='ru')
 		block head
 		title= pageTitle || ''
 
+		link(href='assets/css/slick.css' rel='stylesheet')
+		link(href='assets/css/slick-theme.css' rel='stylesheet')
 		link(href='assets/css/style.css' rel='stylesheet')
 	body
 		.root
@@ -20,4 +22,5 @@ html(lang='ru')
 				block content
 			+footer()
 			script(src='assets/js/jquery-3.3.1.min.js')
+			script(src='assets/js/slick.js')
 			script(src='assets/js/script.js')

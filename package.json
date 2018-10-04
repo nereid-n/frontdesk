@@ -36,6 +36,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  },
   "description": ""
 }

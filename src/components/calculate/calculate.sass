@@ -58,6 +58,8 @@
 
 		&__wrap
 			display: flex
+			@media (max-width: 480px)
+				flex-direction: column-reverse
 
 		&__disclamer
 			width: 100%
@@ -82,6 +84,8 @@
 				align-items: center
 			.main-title
 				text-align: right
+				@media (max-width: 480px)
+					text-align: center
 			.button-main
 				padding-left: 20px
 				padding-right: 20px
@@ -95,6 +99,8 @@
 			display: flex
 			flex-wrap: wrap
 			margin: 0 -10px
+			@media (max-width: 480px)
+				flex-direction: column
 			&-item
 				position: relative
 				margin: 10px
