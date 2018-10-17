@@ -1,11 +1,15 @@
 .header
   position: relative
   background-color: #282828
+  & .container > img
+    width: 180px
+    height: auto
   &__top
     display: flex
     align-items: center
     justify-content: space-between
     padding: 10px 0
+
   &__menu
     margin-right: calc(100% * 0.5 * 0.60)
     padding-right: 5px
@@ -143,10 +147,10 @@
     margin-left: 10px
     &--title
       text-transform: uppercase
-      font-family: 'Muller-Extra-Bold'
+      font-family: 'Muller-Extra-Bold', sans-serif
       font-size: 14px
     &--city
-      font-family: 'Muller-Medium'
+      font-family: 'Muller-Medium', sans-serif
       text-transform: none
     &--main
       p
