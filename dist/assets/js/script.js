@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
     _loop(j);
   }
 });
+
 $(document).ready(function () {
   $('.header__menu-btn').click(function () {
     $('.header__menu').toggleClass('header__menu_show');
@@ -159,7 +160,6 @@ $(document).ready(function () {
     $('.header__menu').toggleClass('header__menu_show');
   });
 });
-
 $(document).ready(function () {
   $('.video-btn-js').click(function () {
     $('.modal-video').addClass('modal-video-show');
@@ -171,6 +171,7 @@ $(document).ready(function () {
     }
   });
 });
+
 $(document).ready(function () {
   if (window.innerWidth < 480) {
     $('.steps-main').slick({
