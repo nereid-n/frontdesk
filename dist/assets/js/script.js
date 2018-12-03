@@ -177,6 +177,14 @@ $(document).ready(function () {
       }
     }
   }
+  $('.jsClientSlider').slick({
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    prevArrow: '<button type="button" class="prevSlick"><img src="assets/images/icons/right-arrow.svg"></button>',
+    nextArrow: '<button type="button" class="nextSlick"><img src="assets/images/icons/right-arrow.svg"></button>'
+  });
 });
 $(document).ready(function () {
   $('.video-btn-js').click(function () {

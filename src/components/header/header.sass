@@ -96,6 +96,7 @@
     width: 50%
     display: flex
     flex-wrap: wrap
+    overflow: hidden
     @media (max-width: 1200px)
       width: 100%
     &-hour
@@ -123,6 +124,8 @@
       flex-wrap: wrap
       background-color: #ffffff
       padding: 15px
+      //@media (max-width: 576px)
+      //  width: 94%
       &--main
         width: 35%
         display: flex
@@ -134,15 +137,47 @@
         @media (max-width: 576px)
           width: 100%
           margin-bottom: 20px
-.client-card
+
+.client-card-slider
   width: 65%
-  display: flex
-  align-items: center
   @media (max-width: 576px)
     width: 100%
+  & .slick-slide
+    margin-right: 1px
+.prevSlick, .nextSlick
+  position: absolute
+  top: 170px
+  display: flex
+  align-items: center
+  background: none
+  border: none
+  outline: none
+  cursor: pointer
+  z-index: 2
+  @media (max-width: 426px)
+    top: 10px
+  & img
+    width: 40px
+    height: 30px
+.prevSlick
+  transform: rotate(180deg)
+  @media (max-width: 426px)
+    left: 150px
+.nextSlick
+  left: 50px
+  @media (max-width: 426px)
+    left: 200px
+.client-card
+  display: flex !important
+  align-items: flex-start
+  width: 90% !important
+  @media (max-width: 426px)
+    flex-direction: column
   &__desc
     margin-top: 10px
     margin-left: 10px
+    @media (max-width: 426px)
+      margin-top: 20px
     &--title
       text-transform: uppercase
       font-family: 'Muller-Extra-Bold', sans-serif
