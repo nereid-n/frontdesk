@@ -177,6 +177,7 @@ $(document).ready(function () {
       }
     }
   }
+
   $('.jsClientSlider').slick({
     arrows: true,
     slidesToShow: 1,
@@ -201,6 +202,7 @@ $(document).ready(function () {
     }
   });
 });
+
 $(document).ready(function () {
   if (window.innerWidth < 480) {
     $('.steps-main').slick({

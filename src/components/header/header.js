@@ -24,6 +24,7 @@ $(document).ready(function() {
       }
     }
   }
+
   $('.jsClientSlider').slick({
     arrows: true,
     slidesToShow: 1,
