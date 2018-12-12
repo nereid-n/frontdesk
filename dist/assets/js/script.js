@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
     _loop(j);
   }
 });
-
 $(document).ready(function () {
   $('.header__menu-btn').click(function () {
     $('.header__menu').toggleClass('header__menu_show');
